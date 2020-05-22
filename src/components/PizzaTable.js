@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-grid-system";
 import NewPizza from "./NewPizza";
-import "./PizzaTable.css";
 
 function PizzaTable() {
   return (

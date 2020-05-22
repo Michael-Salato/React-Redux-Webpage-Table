@@ -47,3 +47,11 @@ button {
   padding: 7px;
   font-weight: bold;
 }
+
+.pizza-table-col {
+  color: white;
+  background-color: #4472c4;
+  padding: 7px;
+  text-align: center;
+  margin: 0 1px 4px;
+}
