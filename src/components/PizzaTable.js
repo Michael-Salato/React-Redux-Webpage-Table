@@ -3,9 +3,21 @@ import { Container, Row, Col } from "react-grid-system";
 import NewPizza from "./NewPizza";
 
 class PizzaTable extends React.Component {
-  state = {
-    pizzas: [{ id: 1 }, { id: 2 }, { id: 3 }],
-  };
+  constructor() {
+    super();
+    this.state = {
+      pizzas: [{ id: 1 }, { id: 2 }, { id: 3 }],
+    };
+
+    this.newRow = this.newRow.bind(this);
+  }
+
+  newRow() {
+    // WIP
+    // this.setState((prevState) => {
+    //   let updatedPizzas = prevState.pizzas;
+    // });
+  }
 
   render() {
     const newPizzaComponents = this.state.pizzas.map((pizza) => {
@@ -35,6 +47,11 @@ class PizzaTable extends React.Component {
           </Col>
         </Row>
         {newPizzaComponents}
+        <Row justify="center">
+          <Col sm={7}>
+            <button onClick={this.newRow}>+ New Row</button>
+          </Col>
+        </Row>
       </Container>
     );
   }
