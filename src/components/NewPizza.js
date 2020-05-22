@@ -3,27 +3,27 @@ import { Row, Col } from "react-grid-system";
 
 function NewPizza() {
   return (
-    <Row justify="center" debug>
-      <Col sm={1} debug>
+    <Row justify="center">
+      <Col className="new-pizza-col" sm={1}>
         <input type="checkbox" />
       </Col>
-      <Col sm={1} debug>
+      <Col className="new-pizza-col" sm={1}>
         <input type="checkbox" />
       </Col>
-      <Col sm={1} debug>
+      <Col className="new-pizza-col" sm={1}>
         <input type="checkbox" />
       </Col>
-      <Col sm={1} debug>
+      <Col className="new-pizza-col" sm={1}>
         <select>
           <option value="small">Small</option>
           <option value="medium">Medium</option>
           <option value="large">Large</option>
         </select>
       </Col>
-      <Col sm={2} debug>
+      <Col className="new-pizza-col" sm={2}>
         <input type="text" />
       </Col>
-      <Col sm={1} debug>
+      <Col className="new-pizza-col" sm={1}>
         <input type="number" min="0" max="10" />
       </Col>
     </Row>
