@@ -1,3 +1,32 @@
-table, th, td {
+table,
+th,
+td {
   border: 1px solid black;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  height: 100px;
+  background-color: #333;
+  color: whitesmoke;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  background-color: gray;
+  height: 100px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  color: whitesmoke;
 }
