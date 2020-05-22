@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-grid-system";
+import { Container, Row } from "react-grid-system";
 
 class UserActionsBars extends React.Component {
   submitOrder() {
