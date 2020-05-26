@@ -28,9 +28,7 @@ body {
   flex: auto;
   padding: 0;
   margin: 0;
-  min-height: calc(
-    100vh - 115px - 105px - 32px
-  ); /** 100% of viewport - header height - footer height - extra height that is cutting off the footer*/
+  padding-bottom: 137px;
 }
 
 .footer {
@@ -42,6 +40,9 @@ body {
   padding: 10px;
   color: whitesmoke;
   font-family: Calibri;
+  bottom: 0;
+  position: fixed;
+  z-index: 1;
 }
 
 button {
