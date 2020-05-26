@@ -67,7 +67,6 @@ button {
 
 .new-pizza-col {
   color: white;
-  background-color: #cfd5ea; /** use conditional rendering to alternate between #CFD5EA & #E9EBF5 */
   padding: 7px;
   text-align: center;
   margin: 0 1px 1px;
