@@ -1,9 +1,7 @@
 import constants from "../constants/Constants";
 
-const pizzaAction = () => {
+export const pizzaAction = () => {
   return {
     type: constants.ADD_ROW,
   };
 };
-
-export default pizzaAction;
