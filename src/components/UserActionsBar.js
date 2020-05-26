@@ -1,9 +1,18 @@
 import React from "react";
 import { Container, Row } from "react-grid-system";
+import { connect } from "react-redux";
 
-class UserActionsBars extends React.Component {
+class UserActionsBar extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.submitOrder = this.submitOrder.bind(this);
+  }
+
   submitOrder() {
-    alert("Order Submitted!");
+    alert(
+      "Order Submitted!\nTotal of " + this.props.pizzas.length + " pizza(s)."
+    );
   }
 
   orderHistory() {
@@ -22,4 +31,10 @@ class UserActionsBars extends React.Component {
   }
 }
 
-export default UserActionsBars;
+const mapStateToProps = (state) => {
+  return {
+    pizzas: state.pizzas,
+  };
+};
+
+export default connect(mapStateToProps)(UserActionsBar);
