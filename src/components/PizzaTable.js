@@ -6,17 +6,21 @@ class PizzaTable extends React.Component {
   constructor() {
     super();
     this.state = {
-      pizzas: [{ id: 1 }, { id: 2 }, { id: 3 }],
+      pizzas: [{ id: 1 }],
     };
 
     this.newRow = this.newRow.bind(this);
   }
 
   newRow() {
-    // WIP
-    // this.setState((prevState) => {
-    //   let updatedPizzas = prevState.pizzas;
-    // });
+    this.setState((prevState) => {
+      let updatedPizzas = prevState.pizzas.slice();
+      updatedPizzas.push({ id: updatedPizzas.length + 1 });
+
+      return {
+        pizzas: updatedPizzas,
+      };
+    });
   }
 
   render() {
