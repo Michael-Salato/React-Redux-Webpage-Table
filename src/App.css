@@ -26,6 +26,11 @@ body {
 
 .main-content {
   flex: auto;
+  padding: 0;
+  margin: 0;
+  min-height: calc(
+    100vh - 115px - 105px - 32px
+  ); /** 100% of viewport - header height - footer height - extra height that is cutting off the footer*/
 }
 
 .footer {
@@ -33,9 +38,6 @@ body {
   margin-top: 15px;
   height: 85px;
   font-size: 12px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
   padding: 10px;
   color: whitesmoke;
