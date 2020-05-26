@@ -5,7 +5,7 @@ function NewPizza(props) {
   const cellColor = props.pizza.id % 2 === 0 ? "#E9EBF5" : "#CFD5EA";
 
   return (
-    <Row justify="center">
+    <Row justify="center" id={"pizzaRow-" + props.pizza.id}>
       <Col
         className="new-pizza-col"
         style={{ backgroundColor: cellColor }}
