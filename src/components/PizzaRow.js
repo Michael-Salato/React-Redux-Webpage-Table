@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-grid-system";
 
-function NewPizza(props) {
+function PizzaRow(props) {
   const cellColor = props.pizza.id % 2 === 0 ? "#E9EBF5" : "#CFD5EA";
 
   return (
@@ -56,4 +56,4 @@ function NewPizza(props) {
   );
 }
 
-export default NewPizza;
+export default PizzaRow;

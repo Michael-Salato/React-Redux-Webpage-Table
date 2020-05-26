@@ -1,14 +1,14 @@
 import React from "react";
 import { Container, Row, Col } from "react-grid-system";
-import NewPizza from "./NewPizza";
+import PizzaRow from "./PizzaRow";
 import { connect } from "react-redux";
 import { addRow } from "../actions";
 
 // React-Redux version
 class PizzaTable extends React.Component {
   render() {
-    const newPizzaComponents = this.props.pizzas.map((pizza) => {
-      return <NewPizza key={pizza.id} pizza={pizza} />;
+    const pizzaComponents = this.props.pizzas.map((pizza) => {
+      return <PizzaRow key={pizza.id} pizza={pizza} />;
     });
 
     return (
@@ -33,7 +33,7 @@ class PizzaTable extends React.Component {
             Amount
           </Col>
         </Row>
-        {newPizzaComponents}
+        {pizzaComponents}
         <Row justify="center">
           <Col sm={7}>
             <button onClick={() => this.props.addRow()}>+ New Row</button>
@@ -82,8 +82,8 @@ class PizzaTable extends React.Component {
   }
 
   render() {
-    const newPizzaComponents = this.state.pizzas.map((pizza) => {
-      return <NewPizza key={pizza.id} pizza={pizza} />;
+    const pizzaComponents = this.state.pizzas.map((pizza) => {
+      return <PizzaRow key={pizza.id} pizza={pizza} />;
     });
 
     return (
@@ -108,7 +108,7 @@ class PizzaTable extends React.Component {
             Amount
           </Col>
         </Row>
-        {newPizzaComponents}
+        {pizzaComponents}
         <Row justify="center">
           <Col sm={7}>
             <button onClick={this.newRow}>+ New Row</button>
