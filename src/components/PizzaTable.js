@@ -1,11 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-grid-system";
 import renderPizzas from "./RenderPizzas";
-import PizzaRow from "./PizzaRow";
-import { connect } from "react-redux";
-import { addRow } from "../actions";
 
-import { Field, FieldArray, reduxForm } from "redux-form";
+import { FieldArray, reduxForm } from "redux-form";
 
 function PizzaTable(props) {
   const { handleSubmit, invalid, pristine, reset, submitting } = props;
