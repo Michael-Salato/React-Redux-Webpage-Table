@@ -6,6 +6,22 @@ import { addRow } from "../actions";
 
 // React-Redux version
 class PizzaTable extends React.Component {
+  constructor() {
+    super();
+
+    this.submitOrder = this.submitOrder.bind(this);
+  }
+
+  submitOrder() {
+    alert(
+      "Order Submitted!\nTotal of " + this.props.pizzas.length + " pizza(s)."
+    );
+  }
+
+  orderHistory() {
+    alert("Opening Order History...");
+  }
+
   render() {
     const pizzaComponents = this.props.pizzas.map((pizza) => {
       return <PizzaRow key={pizza.id} pizza={pizza} />;
@@ -38,6 +54,10 @@ class PizzaTable extends React.Component {
           <Col sm={7}>
             <button onClick={() => this.props.addRow()}>+ New Row</button>
           </Col>
+        </Row>
+        <Row justify="center">
+          <button onClick={this.submitOrder}>Submit Order</button>&nbsp;&nbsp;
+          <button onClick={this.orderHistory}>Order History</button>
         </Row>
       </Container>
     );
