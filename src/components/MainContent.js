@@ -3,7 +3,7 @@ import PizzaTable from "./PizzaTable";
 
 class MainContent extends React.Component {
   handleNewOrder = (values) => {
-    console.log(JSON.stringify(values));
+    console.log(values);
   };
 
   render() {

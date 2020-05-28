@@ -46,8 +46,8 @@ function PizzaTable(props) {
 
 export default reduxForm({
   form: "pizzaForm",
-  // initialValues: {
-  //   pizzas: [new Pizza()],
-  // },
+  initialValues: {
+    pizzas: [new Pizza()],
+  },
   validate,
 })(PizzaTable);
