@@ -6,7 +6,9 @@ function Header() {
 
   let numPizzas = 0;
   if (form.pizzaForm && form.pizzaForm.values) {
-    numPizzas = form.pizzaForm.values.pizzas.length;
+    form.pizzaForm.values.pizzas.forEach((pizza, index) => {
+      numPizzas += Number(pizza.amount);
+    });
   }
 
   return (

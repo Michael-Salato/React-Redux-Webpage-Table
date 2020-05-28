@@ -9,6 +9,16 @@ function cellColor(index) {
   return index % 2 !== 0 ? "#E9EBF5" : "#CFD5EA";
 }
 
+function normalizeAmount(value) {
+  if (value < 1) {
+    return 1;
+  } else if (value > 10) {
+    return 10;
+  } else {
+    return value;
+  }
+}
+
 function renderPizzas({ fields }) {
   return (
     <React.Fragment>
@@ -90,6 +100,7 @@ function renderPizzas({ fields }) {
               type="number"
               min="1"
               max="10"
+              normalize={normalizeAmount}
             />
           </Col>
         </Row>
