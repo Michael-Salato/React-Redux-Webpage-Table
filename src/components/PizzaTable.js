@@ -50,5 +50,6 @@ export default reduxForm({
   initialValues: {
     pizzas: [new Pizza()],
   },
-  // validate,
+  validate,
+  enableReinitialize: true,
 })(PizzaTable);

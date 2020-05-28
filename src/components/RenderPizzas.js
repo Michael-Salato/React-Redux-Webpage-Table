@@ -98,7 +98,7 @@ function renderPizzas({ fields }) {
           <button
             className="button-new-row"
             type="button"
-            onClick={() => fields.push()}
+            onClick={() => fields.push({})}
           >
             + New Row
           </button>
