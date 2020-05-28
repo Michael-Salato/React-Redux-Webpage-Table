@@ -1,6 +1,6 @@
 import React from "react";
 
-function errorField({
+function renderField({
   input,
   label,
   type,
@@ -18,4 +18,4 @@ function errorField({
   );
 }
 
-export default errorField;
+export default renderField;

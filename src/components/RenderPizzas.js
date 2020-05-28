@@ -3,7 +3,7 @@ import { Row, Col } from "react-grid-system";
 import { Field } from "redux-form";
 import Pizza from "../Pizza";
 
-import errorField from "../errorField";
+import renderField from "../renderField";
 
 function cellColor(index) {
   return index % 2 !== 0 ? "#E9EBF5" : "#CFD5EA";
@@ -96,7 +96,7 @@ function renderPizzas({ fields }) {
           >
             <Field
               name={`${pizza}.amount`}
-              component={errorField}
+              component={renderField}
               type="number"
               min="1"
               max="10"
