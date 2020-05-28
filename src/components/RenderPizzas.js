@@ -4,6 +4,7 @@ import { Field } from "redux-form";
 import Pizza from "../Pizza";
 
 import renderField from "../renderField";
+import renderSelectField from "../renderSelectField";
 
 function cellColor(index) {
   return index % 2 !== 0 ? "#E9EBF5" : "#CFD5EA";
@@ -71,7 +72,7 @@ function renderPizzas({ fields }) {
             style={{ backgroundColor: cellColor(index) }}
             sm={1}
           >
-            <Field name={`${pizza}.size`} component="select">
+            <Field name={`${pizza}.size`} component={renderSelectField}>
               <option />
               <option value="small">Small</option>
               <option value="medium">Medium</option>

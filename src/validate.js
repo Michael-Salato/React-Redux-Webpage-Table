@@ -8,6 +8,11 @@ function validate(values) {
     values.pizzas.forEach((pizza, index) => {
       const pizzaErrors = {};
 
+      if (!pizza.size) {
+        pizzaErrors.size = "Required";
+        pizzaArrayErrors[index] = pizzaErrors;
+      }
+
       if (!pizza.amount) {
         pizzaErrors.amount = "Required";
         pizzaArrayErrors[index] = pizzaErrors;

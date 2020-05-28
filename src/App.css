@@ -90,8 +90,12 @@ button {
 
 .error {
   color: red;
+  font-weight: bold;
+  font-family: Calibri;
 }
 
 .warning {
   color: yellow;
+  font-weight: bold;
+  font-family: Calibri;
 }
