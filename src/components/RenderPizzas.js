@@ -95,7 +95,11 @@ function renderPizzas({ fields }) {
       ))}
       <Row justify="center">
         <Col sm={6.7}>
-          <button type="button" onClick={() => fields.push()}>
+          <button
+            className="button-new-row"
+            type="button"
+            onClick={() => fields.push()}
+          >
             + New Row
           </button>
         </Col>

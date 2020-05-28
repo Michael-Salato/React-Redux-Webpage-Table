@@ -65,7 +65,6 @@ button {
   background-color: rgb(241, 54, 54);
   border-color: rgb(241, 54, 54);
   padding: 5px;
-  /* vertical-align: middle; */
 }
 
 .pizza-table-col {
@@ -83,4 +82,8 @@ button {
   padding: 7px;
   text-align: center;
   margin: 0 1px 1px;
+}
+
+.button-new-row {
+  margin: 10px 0;
 }
