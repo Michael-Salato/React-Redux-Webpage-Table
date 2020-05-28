@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-grid-system";
 import { Field } from "redux-form";
+import Pizza from "../Pizza";
 
 import errorField from "../errorField";
 
@@ -98,7 +99,7 @@ function renderPizzas({ fields }) {
           <button
             className="button-new-row"
             type="button"
-            onClick={() => fields.push({})}
+            onClick={() => fields.push(new Pizza())}
           >
             + New Row
           </button>
