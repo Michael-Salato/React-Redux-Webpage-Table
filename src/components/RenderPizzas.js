@@ -2,6 +2,8 @@ import React from "react";
 import { Row, Col } from "react-grid-system";
 import { Field } from "redux-form";
 
+import errorField from "../errorField";
+
 function cellColor(index) {
   return index % 2 !== 0 ? "#E9EBF5" : "#CFD5EA";
 }
@@ -9,7 +11,7 @@ function cellColor(index) {
 function renderPizzas({ fields }) {
   return (
     <React.Fragment>
-      {fields.map((member, index) => (
+      {fields.map((pizza, index) => (
         <Row key={index} justify="center">
           <Col
             className="new-pizza-col"
@@ -17,7 +19,7 @@ function renderPizzas({ fields }) {
             sm={1}
           >
             <Field
-              name={`${member}.pepperoni`}
+              name={`${pizza}.pepperoni`}
               component="input"
               type="checkbox"
             />
@@ -28,7 +30,7 @@ function renderPizzas({ fields }) {
             sm={1}
           >
             <Field
-              name={`${member}.sausage`}
+              name={`${pizza}.sausage`}
               component="input"
               type="checkbox"
             />
@@ -39,7 +41,7 @@ function renderPizzas({ fields }) {
             sm={1}
           >
             <Field
-              name={`${member}.spinach`}
+              name={`${pizza}.spinach`}
               component="input"
               type="checkbox"
             />
@@ -49,7 +51,7 @@ function renderPizzas({ fields }) {
             style={{ backgroundColor: cellColor(index) }}
             sm={1}
           >
-            <Field name={`${member}.size`} component="select">
+            <Field name={`${pizza}.size`} component="select">
               <option />
               <option value="small">Small</option>
               <option value="medium">Medium</option>
@@ -62,7 +64,7 @@ function renderPizzas({ fields }) {
             sm={2}
           >
             <Field
-              name={`${member}.instructions`}
+              name={`${pizza}.instructions`}
               component="input"
               type="text"
             />
@@ -73,10 +75,10 @@ function renderPizzas({ fields }) {
             sm={1}
           >
             <Field
-              name={`${member}.amount`}
-              component="input"
+              name={`${pizza}.amount`}
+              component={errorField}
               type="number"
-              min="0"
+              min="1"
               max="10"
             />
           </Col>

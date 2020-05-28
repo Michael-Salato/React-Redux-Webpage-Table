@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-grid-system";
 import renderPizzas from "./RenderPizzas";
 import Pizza from "../Pizza";
+import validate from "../validate";
 
 import { FieldArray, reduxForm } from "redux-form";
 
@@ -45,7 +46,8 @@ function PizzaTable(props) {
 
 export default reduxForm({
   form: "pizzaForm",
-  initialValues: {
-    pizzas: [new Pizza()],
-  },
+  // initialValues: {
+  //   pizzas: [new Pizza()],
+  // },
+  validate,
 })(PizzaTable);
