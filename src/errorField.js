@@ -12,8 +12,8 @@ function errorField({
     <React.Fragment>
       <input {...input} type={type} placeholder={label} min={min} max={max} />
       {touched &&
-        ((error && <span>{error}</span>) ||
-          (warning && <span>{warning}</span>))}
+        ((error && <span className="error">{error}</span>) ||
+          (warning && <span className="warning">{warning}</span>))}
     </React.Fragment>
   );
 }

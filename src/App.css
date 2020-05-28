@@ -87,3 +87,11 @@ button {
 .button-new-row {
   margin: 10px 0;
 }
+
+.error {
+  color: red;
+}
+
+.warning {
+  color: yellow;
+}
