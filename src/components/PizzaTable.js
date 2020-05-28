@@ -12,6 +12,7 @@ function PizzaTable(props) {
     <Container fluid>
       <form onSubmit={handleSubmit}>
         <Row justify="center">
+          <Col sm={0.6}></Col>
           <Col className="pizza-table-col" sm={1}>
             Pepperoni
           </Col>
@@ -49,5 +50,5 @@ export default reduxForm({
   initialValues: {
     pizzas: [new Pizza()],
   },
-  validate,
+  // validate,
 })(PizzaTable);

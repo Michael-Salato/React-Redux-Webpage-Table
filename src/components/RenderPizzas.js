@@ -13,6 +13,15 @@ function renderPizzas({ fields }) {
     <React.Fragment>
       {fields.map((pizza, index) => (
         <Row key={index} justify="center">
+          <Col sm={0.6} className="button-delete-container">
+            <button
+              className="button-delete"
+              type="button"
+              onClick={() => fields.remove(index)}
+            >
+              Delete
+            </button>
+          </Col>
           <Col
             className="new-pizza-col"
             style={{ backgroundColor: cellColor(index) }}
@@ -85,7 +94,7 @@ function renderPizzas({ fields }) {
         </Row>
       ))}
       <Row justify="center">
-        <Col sm={7}>
+        <Col sm={6.7}>
           <button type="button" onClick={() => fields.push()}>
             + New Row
           </button>

@@ -55,6 +55,19 @@ button {
   font-family: Calibri;
 }
 
+.button-delete-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-delete {
+  background-color: rgb(241, 54, 54);
+  border-color: rgb(241, 54, 54);
+  padding: 5px;
+  /* vertical-align: middle; */
+}
+
 .pizza-table-col {
   color: white;
   background-color: #4472c4;
