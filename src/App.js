@@ -17,19 +17,21 @@ class App extends React.Component {
     return (
       <Router>
         <ScreenClassProvider>
-          <Header />
-          <main>
-            <Switch>
-              <Route path="/" exact component={Welcome} />
-              <Route
-                path="/orderpizza"
-                render={(props) => (
-                  <PizzaTable {...props} onSubmit={this.handleNewOrder} />
-                )}
-              />
-            </Switch>
-          </main>
-          <Footer />
+          <div className="App">
+            <Header />
+            <main>
+              <Switch>
+                <Route path="/" exact component={Welcome} />
+                <Route
+                  path="/orderpizza"
+                  render={(props) => (
+                    <PizzaTable {...props} onSubmit={this.handleNewOrder} />
+                  )}
+                />
+              </Switch>
+            </main>
+            <Footer />
+          </div>
         </ScreenClassProvider>
       </Router>
     );
