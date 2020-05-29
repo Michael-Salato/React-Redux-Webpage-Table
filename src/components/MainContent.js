@@ -1,5 +1,6 @@
 import React from "react";
 import PizzaTable from "./PizzaTable";
+import Welcome from "./Welcome";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 class MainContent extends React.Component {
@@ -12,6 +13,7 @@ class MainContent extends React.Component {
       <Router>
         <main className="main-content">
           <Switch>
+            <Route path="/" exact component={Welcome} />
             <Route
               path="/orderpizza"
               render={(props) => (
