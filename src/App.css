@@ -55,6 +55,20 @@ button {
   font-family: Calibri;
 }
 
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
 .button-delete-container {
   display: flex;
   align-items: center;
