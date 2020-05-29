@@ -17,10 +17,10 @@ function Header() {
       <p>Welcome to the Pizzeria! Pizzas: {numPizzas}</p>
       <nav>
         <ul className="nav-links">
-          <Link to="/">
+          <Link className="nav-link" to="/">
             <li>Home</li>
           </Link>
-          <Link to="/orderpizza">
+          <Link className="nav-link" to="/orderpizza">
             <li>Order Pizza</li>
           </Link>
         </ul>

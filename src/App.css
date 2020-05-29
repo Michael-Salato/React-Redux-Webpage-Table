@@ -56,10 +56,10 @@ button {
 }
 
 nav {
+  height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: whitesmoke;
 }
 
 .nav-links {
@@ -67,6 +67,11 @@ nav {
   justify-content: space-around;
   align-items: center;
   list-style: none;
+}
+
+.nav-link {
+  color: whitesmoke;
+  padding: 0 10px;
 }
 
 .button-delete-container {
