@@ -16,7 +16,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <ScreenClassProvider className="App">
+        <ScreenClassProvider>
           <Header />
           <main>
             <Switch>
