@@ -21,9 +21,16 @@ function normalizeAmount(value) {
   }
 }
 
-function renderPizzas({ fields }) {
+function renderPizzas({ fields, meta: { error } }) {
   return (
     <React.Fragment>
+      {error && (
+        <Row justify="center">
+          <Col sm={6.7}>
+            <span className="error">{error}</span>
+          </Col>
+        </Row>
+      )}
       {fields.map((pizza, index) => (
         <Row key={index} justify="center">
           <Col sm={0.6} className="button-delete-container">
