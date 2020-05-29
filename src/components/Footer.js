@@ -4,7 +4,7 @@ class Footer extends React.Component {
   render() {
     const currentYear = new Date().getFullYear();
     return (
-      <footer className="footer">
+      <footer>
         <p>
           123 ABC Street
           <br />

@@ -13,7 +13,7 @@ function Header() {
   }
 
   return (
-    <header className="header">
+    <header>
       <p>Welcome to the Pizzeria! Pizzas: {numPizzas}</p>
       <nav>
         <ul className="nav-links">

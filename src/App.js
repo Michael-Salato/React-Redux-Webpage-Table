@@ -18,7 +18,7 @@ class App extends React.Component {
       <Router>
         <ScreenClassProvider className="App">
           <Header />
-          <main className="main-content">
+          <main>
             <Switch>
               <Route path="/" exact component={Welcome} />
               <Route
