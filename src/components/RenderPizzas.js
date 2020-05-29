@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col } from "react-grid-system";
 import { Field } from "redux-form";
 import Pizza from "../Pizza";
+import constants from "../constants";
 
 import renderField from "../renderField";
 import renderSelectField from "../renderSelectField";
@@ -11,10 +12,10 @@ function cellColor(index) {
 }
 
 function normalizeAmount(value) {
-  if (value < 1) {
-    return 1;
-  } else if (value > 10) {
-    return 10;
+  if (value < constants.MIN_PIZZA_AMOUNT) {
+    return constants.MIN_PIZZA_AMOUNT;
+  } else if (value > constants.MAX_PIZZA_AMOUNT) {
+    return constants.MAX_PIZZA_AMOUNT;
   } else {
     return value;
   }
@@ -99,8 +100,8 @@ function renderPizzas({ fields }) {
               name={`${pizza}.amount`}
               component={renderField}
               type="number"
-              min="1"
-              max="10"
+              min={constants.MIN_PIZZA_AMOUNT}
+              max={constants.MAX_PIZZA_AMOUNT}
               normalize={normalizeAmount}
             />
           </Col>
