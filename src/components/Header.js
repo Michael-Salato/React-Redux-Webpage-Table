@@ -23,6 +23,9 @@ function Header() {
           <Link className="nav-link" to="/orderpizza">
             <li>Order Pizza</li>
           </Link>
+          <Link className="nav-link" to="/orderhistory">
+            <li>Order History</li>
+          </Link>
         </ul>
       </nav>
     </header>

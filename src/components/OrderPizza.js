@@ -6,7 +6,7 @@ import validate from "../validate";
 
 import { FieldArray, reduxForm } from "redux-form";
 
-function PizzaTable(props) {
+function OrderPizza(props) {
   const { handleSubmit, invalid, pristine, reset, submitting } = props;
   return (
     <Container fluid>
@@ -51,4 +51,4 @@ export default reduxForm({
     pizzas: [new Pizza()],
   },
   validate,
-})(PizzaTable);
+})(OrderPizza);

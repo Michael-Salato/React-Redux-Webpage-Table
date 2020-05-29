@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import PizzaTable from "./components/PizzaTable";
+import OrderPizza from "./components/OrderPizza";
+import OrderHistory from "./components/OrderHistory";
 import Welcome from "./components/Welcome";
 
 class App extends React.Component {
@@ -25,9 +26,10 @@ class App extends React.Component {
                 <Route
                   path="/orderpizza"
                   render={(props) => (
-                    <PizzaTable {...props} onSubmit={this.handleNewOrder} />
+                    <OrderPizza {...props} onSubmit={this.handleNewOrder} />
                   )}
                 />
+                <Route path="/orderhistory" component={OrderHistory} />
               </Switch>
             </main>
             <Footer />
