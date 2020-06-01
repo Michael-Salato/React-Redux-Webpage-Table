@@ -12,8 +12,7 @@ function OrderPizza(props) {
     <Container fluid>
       <form onSubmit={handleSubmit}>
         <Row justify="center">
-          <Col sm={0.6}></Col>
-          <Col className="pizza-table-col" sm={1}>
+          <Col className="pizza-table-col" sm={1} offset={{ sm: 0.6 }}>
             Pepperoni
           </Col>
           <Col className="pizza-table-col" sm={1}>
