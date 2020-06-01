@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import OrderPizza from "./components/OrderPizza";
 import OrderHistory from "./components/OrderHistory";
 import Welcome from "./components/Welcome";
+import { Visible, Hidden } from "react-grid-system";
 
 class App extends React.Component {
   handleNewOrder = (values) => {
@@ -20,6 +21,25 @@ class App extends React.Component {
         <ScreenClassProvider>
           <div className="App">
             <Header />
+            <p>
+              <span>Your current screen class is </span>
+              <Visible xs>
+                <strong>xs</strong>
+              </Visible>
+              <Visible sm>
+                <strong>sm</strong>
+              </Visible>
+              <Visible md>
+                <strong>md</strong>
+              </Visible>
+              <Visible lg>
+                <strong>lg</strong>
+              </Visible>
+              <Visible xl>
+                <strong>xl</strong>
+              </Visible>
+              <span>.</span>
+            </p>
             <main>
               <Switch>
                 <Route path="/" exact component={Welcome} />
