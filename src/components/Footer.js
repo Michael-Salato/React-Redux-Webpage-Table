@@ -5,11 +5,11 @@ class Footer extends React.Component {
     const currentYear = new Date().getFullYear();
     return (
       <footer>
-        <p>
+        <address>
           123 ABC Street
           <br />
           Pizza, Planet 12345
-        </p>
+        </address>
         <p>Copyright &copy; {currentYear}, PizzaTime</p>
       </footer>
     );
