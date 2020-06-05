@@ -17,15 +17,21 @@ function Header() {
       <p>Welcome to the Pizzeria! Pizzas: {numPizzas}</p>
       <nav>
         <ul className="nav-links">
-          <Link className="nav-link" to="/">
-            <li>Home</li>
-          </Link>
-          <Link className="nav-link" to="/orderpizza">
-            <li>Order Pizza</li>
-          </Link>
-          <Link className="nav-link" to="/orderhistory">
-            <li>Order History</li>
-          </Link>
+          <li>
+            <Link className="nav-link" to="/">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link className="nav-link" to="/orderpizza">
+              Order Pizza
+            </Link>
+          </li>
+          <li>
+            <Link className="nav-link" to="/orderhistory">
+              Order History
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
