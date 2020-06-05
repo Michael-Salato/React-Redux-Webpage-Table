@@ -96,8 +96,7 @@ nav {
   font-family: Calibri;
 }
 
-.new-pizza-col {
-  color: white;
+.pizza-cell {
   padding: 7px;
   text-align: center;
   margin: 0 1px 1px;
@@ -117,4 +116,8 @@ nav {
   color: yellow;
   font-weight: bold;
   font-family: Calibri;
+}
+
+p:first-letter {
+  text-transform: capitalize;
 }

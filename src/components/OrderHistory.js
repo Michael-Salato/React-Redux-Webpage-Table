@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-grid-system";
 import orderHistory from "../orderHistory";
+import cellColor from "../formatters/cellColor";
+import toppings from "../formatters/toppings";
 
 function OrderHistory() {
   return (
@@ -22,23 +24,36 @@ function OrderHistory() {
       </Row>
       {orderHistory.map((order, index) => (
         <Row key={"orderHistory-" + index} justify="center">
-          <Col sm={2}>
-            <p>
-              {order.pepperoni ? "Pepperoni" : null} {order.sausage}
-            </p>
+          <Col
+            sm={2}
+            className="pizza-cell"
+            style={{ backgroundColor: cellColor(index) }}
+          >
+            <p>{toppings(order)}</p>
           </Col>
-          <Col sm={1}>
+          <Col
+            sm={1}
+            className="pizza-cell"
+            style={{ backgroundColor: cellColor(index) }}
+          >
             <p>{order.size}</p>
           </Col>
-          <Col sm={2}>
-            <p>{order.instructions}</p>
+          <Col
+            sm={2}
+            className="pizza-cell"
+            style={{ backgroundColor: cellColor(index) }}
+          >
+            <p>{order.instructions ? order.instructions : "none"}</p>
           </Col>
-          <Col sm={1}>
+          <Col
+            sm={1}
+            className="pizza-cell"
+            style={{ backgroundColor: cellColor(index) }}
+          >
             <p>{order.amount}</p>
           </Col>
         </Row>
       ))}
-      <p>{JSON.stringify(orderHistory)}</p>
     </Container>
   );
 }

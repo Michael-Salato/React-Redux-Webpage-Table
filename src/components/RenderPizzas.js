@@ -3,13 +3,9 @@ import { Row, Col } from "react-grid-system";
 import { Field } from "redux-form";
 import Pizza from "../Pizza";
 import constants from "../constants";
-
+import cellColor from "../formatters/cellColor";
 import renderField from "../renderField";
 import renderSelectField from "../renderSelectField";
-
-function cellColor(index) {
-  return index % 2 !== 0 ? "#E9EBF5" : "#CFD5EA";
-}
 
 function normalizeAmount(value) {
   if (value < constants.MIN_PIZZA_AMOUNT) {
@@ -43,7 +39,7 @@ function renderPizzas({ fields, meta: { error } }) {
             </button>
           </Col>
           <Col
-            className="new-pizza-col"
+            className="pizza-cell"
             style={{ backgroundColor: cellColor(index) }}
             sm={1}
           >
@@ -54,7 +50,7 @@ function renderPizzas({ fields, meta: { error } }) {
             />
           </Col>
           <Col
-            className="new-pizza-col"
+            className="pizza-cell"
             style={{ backgroundColor: cellColor(index) }}
             sm={1}
           >
@@ -65,7 +61,7 @@ function renderPizzas({ fields, meta: { error } }) {
             />
           </Col>
           <Col
-            className="new-pizza-col"
+            className="pizza-cell"
             style={{ backgroundColor: cellColor(index) }}
             sm={1}
           >
@@ -76,7 +72,7 @@ function renderPizzas({ fields, meta: { error } }) {
             />
           </Col>
           <Col
-            className="new-pizza-col"
+            className="pizza-cell"
             style={{ backgroundColor: cellColor(index) }}
             sm={1}
           >
@@ -88,7 +84,7 @@ function renderPizzas({ fields, meta: { error } }) {
             </Field>
           </Col>
           <Col
-            className="new-pizza-col"
+            className="pizza-cell"
             style={{ backgroundColor: cellColor(index) }}
             sm={2}
           >
@@ -99,7 +95,7 @@ function renderPizzas({ fields, meta: { error } }) {
             />
           </Col>
           <Col
-            className="new-pizza-col"
+            className="pizza-cell"
             style={{ backgroundColor: cellColor(index) }}
             sm={1}
           >

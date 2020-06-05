@@ -1,6 +1,6 @@
 const orderHistory = [
   {
-    pepperoni: false,
+    pepperoni: true,
     sausage: true,
     spinach: true,
     size: "medium",
@@ -9,8 +9,8 @@ const orderHistory = [
   },
   {
     pepperoni: true,
-    sausage: true,
-    spinach: false,
+    sausage: false,
+    spinach: true,
     size: "small",
     instructions: "Half sausage, half pepperoni",
     amount: "1",
