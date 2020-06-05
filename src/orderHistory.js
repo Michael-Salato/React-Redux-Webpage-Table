@@ -1,6 +1,8 @@
+const date = new Date();
+
 const orderHistory = [
   {
-    date: new Date(),
+    date: date,
     pepperoni: true,
     sausage: true,
     spinach: true,
@@ -9,6 +11,7 @@ const orderHistory = [
     amount: "1",
   },
   {
+    date: date,
     pepperoni: true,
     sausage: false,
     spinach: true,
@@ -17,6 +20,7 @@ const orderHistory = [
     amount: "1",
   },
   {
+    date: date,
     pepperoni: false,
     sausage: false,
     spinach: false,

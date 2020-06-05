@@ -4,12 +4,17 @@ import orderHistory from "../orderHistory";
 import cellColor from "../formatters/cellColor";
 import toppings from "../formatters/toppings";
 
+import moment from "moment";
+
 function OrderHistory() {
   console.log(orderHistory);
   return (
     <Container fluid>
       <h1>Order History</h1>
       <Row justify="center">
+        <Col className="pizza-table-col" sm={2}>
+          Order Date/Time
+        </Col>
         <Col className="pizza-table-col" sm={2}>
           Toppings
         </Col>
@@ -25,6 +30,13 @@ function OrderHistory() {
       </Row>
       {orderHistory.map((order, index) => (
         <Row key={"orderHistory-" + index} justify="center">
+          <Col
+            sm={2}
+            className="pizza-cell"
+            style={{ backgroundColor: cellColor(index) }}
+          >
+            <p>{moment(order.date).format("MM/DD/YYYY, h:mm a")}</p>
+          </Col>
           <Col
             sm={2}
             className="pizza-cell"
