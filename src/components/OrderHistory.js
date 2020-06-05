@@ -10,7 +10,7 @@ function OrderHistory() {
   console.log(orderHistory);
   return (
     <Container fluid>
-      <h1>Order History</h1>
+      <h1 style={{ textAlign: "center" }}>Order History</h1>
       <Row justify="center">
         <Col className="pizza-table-col" sm={2}>
           Order Date/Time

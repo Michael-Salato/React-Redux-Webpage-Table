@@ -10,6 +10,7 @@ function OrderPizza(props) {
   const { handleSubmit, invalid, pristine, reset, submitting } = props;
   return (
     <Container fluid>
+      <h1 style={{ textAlign: "center" }}>Order Pizza</h1>
       <form onSubmit={handleSubmit}>
         <Row justify="center">
           <Col className="pizza-table-col" sm={1} offset={{ sm: 0.6 }}>
