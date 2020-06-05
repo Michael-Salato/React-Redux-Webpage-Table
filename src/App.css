@@ -118,6 +118,10 @@ nav {
   font-family: Calibri;
 }
 
+p {
+  font-family: Calibri;
+}
+
 p:first-letter {
   text-transform: capitalize;
 }
