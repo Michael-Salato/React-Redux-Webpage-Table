@@ -10,6 +10,8 @@ import OrderHistory from "./components/OrderHistory";
 import Welcome from "./components/Welcome";
 import { Visible, Hidden } from "react-grid-system";
 
+import moment from "moment";
+
 class App extends React.Component {
   handleNewOrder = (values) => {
     console.log(values);
@@ -40,6 +42,8 @@ class App extends React.Component {
               </Visible>
               <span>.</span>
             </p>
+            <p>{moment().format("MMMM Do YYYY")}</p>
+            <p>{moment().format("h:mm a")}</p>
             <main>
               <Switch>
                 <Route path="/" exact component={Welcome} />
