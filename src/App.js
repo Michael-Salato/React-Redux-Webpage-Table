@@ -14,6 +14,11 @@ import moment from "moment";
 
 class App extends React.Component {
   handleNewOrder = (values) => {
+    const dateSubmitted = new Date();
+
+    values.pizzas.forEach((pizza) => {
+      pizza.date = dateSubmitted;
+    });
     console.log(values);
   };
 

@@ -5,6 +5,7 @@ import cellColor from "../formatters/cellColor";
 import toppings from "../formatters/toppings";
 
 function OrderHistory() {
+  console.log(orderHistory);
   return (
     <Container fluid>
       <h1>Order History</h1>

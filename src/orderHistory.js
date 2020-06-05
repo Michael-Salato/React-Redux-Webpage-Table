@@ -1,5 +1,6 @@
 const orderHistory = [
   {
+    date: new Date(),
     pepperoni: true,
     sausage: true,
     spinach: true,
