@@ -13,8 +13,8 @@ const orderHistory = [
   {
     date: date,
     pepperoni: true,
-    sausage: false,
-    spinach: true,
+    sausage: true,
+    spinach: false,
     size: "small",
     instructions: "Half sausage, half pepperoni",
     amount: "1",
